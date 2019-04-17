@@ -1,0 +1,32 @@
+<div class="jumbotron06" style="padding-bottom: 5%;">
+  <div class="container" style="position:center;padding-top: 5%">
+    <mat-card style="width: 100%;padding-bottom: 50%;">
+      <div style="padding: 5%;">
+        <span class="mat-headline">Edit a Lecture.</span>
+        <hr>
+        <div style="padding: 5%;">
+          <form (ngSubmit)="onEdit(Lecture)" #Lecture="ngForm">
+            <mat-form-field class="input-size">
+              <input matInput type="text" [placeholder]="data.name" name="name" ngModel>
+            </mat-form-field>
+            <mat-form-field class="input-size">
+              <input matInput type="text" [placeholder]="data.lecturer" name="lecturer" ngModel>
+            </mat-form-field>
+            <mat-form-field class="input-size">
+              <textarea matInput [placeholder]="data.description" name="description" ngModel></textarea>
+            </mat-form-field>
+            <mat-form-field class="input-size">
+              <input matInput type="date" [placeholder]="data.date" name="date" ngModel>
+            </mat-form-field>
+            <br>
+            <button type="submit" class="btn create-btn btn-lg" style="width: 100%">Edit Lecture.
+            </button>
+          </form>
+          <br>
+          <button class="btn create-btn btn-lg" style="background-color:brown; width: 100%" (click)="deleteItem()">Delete Lecture
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

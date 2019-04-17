@@ -1,0 +1,27 @@
+<div  style="padding-bottom: 5%;" class="ng-view" autoscroll="true">
+  <div class="container" style="position:center;padding-top: 5%">
+    <div class="row">
+      <mat-card style="width: 100%;padding-bottom: 50%;">
+        <div style="padding: 5%;">
+            <span class="mat-headline">Last Watches:</span>
+          <div style="padding: 5%;">
+
+              <mat-accordion>
+                  <mat-expansion-panel *ngFor="let video of videos" >
+                      <mat-expansion-panel-header>
+                          <mat-panel-title class="result">
+                              {{video.name}}
+                          </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div [routerLink]="['/lecture/'+video.lectureid, {outlets:{ videoOutlet:[video._id]}} ]">
+                          {{video.reference}}
+                      </div>
+                  </mat-expansion-panel>
+              </mat-accordion>
+
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

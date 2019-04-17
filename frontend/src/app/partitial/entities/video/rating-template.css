@@ -1,0 +1,17 @@
+.star {
+    font-size: 2.5rem;
+    color: #ffdf7e
+}
+.filled {
+    color: #FFD700;
+}
+.bad {
+    color: #ffe8a1;
+}
+.filled.bad {
+    color: 	#ffdf7e;
+}
+.rating-container {
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "classboots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-front": "cd ./frontend && npm i && npm start",
+    "build-back": "cd ./backend && npm i",
+    "postinstall": "npm run build-front && npm run build-back",
+    "start": "node deploy.js",
+    "start-dev": "concurrently --kill-others \"node deploy.js\" \"cd ./frontend && npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ng-bootstrap/ng-bootstrap": "^4.0.3",
+    "@types/googlemaps": "^3.30.16",
+    "bcrypt": "^3.0.2",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

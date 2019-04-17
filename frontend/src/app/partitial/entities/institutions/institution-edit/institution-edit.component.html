@@ -1,0 +1,37 @@
+<div class="jumbotron06" style="padding-bottom: 5%;">
+  <div class="container" style="position:center;padding-top: 5%">
+    <mat-card style="width: 100%;padding-bottom: 50%;">
+      <div style="padding: 5%;">
+        <span class="mat-headline">Edit a Institution.</span>
+        <hr>
+        <mat-card class="error" *ngIf="error">{{errorMessage}}</mat-card>
+        <div style="padding: 5%;">
+          <form (ngSubmit)="onEdit(Institution)" #Institution="ngForm">
+            <mat-form-field class="input-size">
+              <input matInput type="text" name="name" [placeholder]="institution.name" ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-size">
+              <input matInput type="text" name="address" [placeholder]="institution.address" ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-size">
+              <input matInput type="text" name="geolocation" [placeholder]="institution.geolocation" ngModel>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-size">
+              <input matInput type="text" name="image" [placeholder]="institution.image" ngModel>
+            </mat-form-field>
+            <br>
+            <button type="submit" [disabled]="Institution.invalid" class="btn create-btn btn-lg" style="width: 100%">Edit Institution.
+            </button>
+          </form>
+          <br>
+          <button class="btn create-btn btn-lg" style="background-color:brown; width: 100%" (click)="deleteItem()">Delete Institution
+          </button>
+          <br>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

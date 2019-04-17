@@ -1,0 +1,21 @@
+.warrper {
+    max-height: 100%;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+}
+
+@media screen and (min-width: 800px) {
+    .body-container {
+        min-height: 69vh;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .body-container {
+        min-height: 72.6vh;
+    }
+}

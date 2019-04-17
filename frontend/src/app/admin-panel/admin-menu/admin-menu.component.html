@@ -1,0 +1,46 @@
+<div class="manger-menu">
+  <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+      <a href="#"
+         routerLinkActive="active"
+         data-toggle="dropdown"
+         role="button"
+         aria-haspopup="true"
+         aria-expanded="false"
+         class="nav-link dropdown-toggle">Requests</a>
+      <div class="dropdown-menu">
+        <a [routerLink]="[ {outlets:{ adminPanel:'statistics/statistics'}}]" class="dropdown-item">Statistics</a>
+        <a [routerLink]="[ {outlets:{ adminPanel:'statistics/map'}}]"  class="dropdown-item">Map</a>
+        <a [routerLink]="[ {outlets:{ adminPanel:'statistics/aho'}}]"  class="dropdown-item">Aho algorithm</a>
+        <a [routerLink]="[ {outlets:{ adminPanel:'statistics/groupby'}}]"  class="dropdown-item">GroupBy</a>
+        <a [routerLink]="[ {outlets:{ adminPanel:'statistics/others'}}]"  class="dropdown-item">Other..</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a href="#"
+         routerLinkActive="active"
+         data-toggle="dropdown"
+         role="button"
+         aria-haspopup="true"
+         aria-expanded="false"
+         class="nav-link dropdown-toggle">Collections</a>
+      <div class="dropdown-menu">
+        <a [routerLink]="[ {outlets:{ adminPanel:'collections/users'}}]" class="dropdown-item">Users</a>
+        <div class="dropdown-divider"></div>
+        <a [routerLink]="[{outlets:{ adminPanel:'collections/institutions'}}]" class="dropdown-item">Institutions</a>
+        <a [routerLink]="[{outlets:{ adminPanel:'collections/schools'}}]" class="dropdown-item">Schools</a>
+        <a [routerLink]="[{outlets:{ adminPanel:'collections/subjects'}}]" class="dropdown-item">Subjects</a>
+        <a [routerLink]="[{outlets:{ adminPanel:'collections/lectures'}}]" class="dropdown-item">Lectures</a>
+        <a [routerLink]="[{outlets:{ adminPanel:'collections/videos'}}]" class="dropdown-item">Videos</a>
+
+      </div>
+    </li>
+    <!--<li nav-item>-->
+      <!--<a class="nav-link">Link</a>-->
+    <!--</li>-->
+    <!--<li>-->
+      <!--<a class="nav-link disabled" >Disabled</a>-->
+    <!--</li>-->
+
+  </ul>
+</div>
